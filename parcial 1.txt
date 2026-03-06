@@ -1,0 +1,55 @@
+n = int(input("Ingrese un numero de 3 digitos: "))
+
+if 100 <= n <= 999:
+    print("Tu numero:", n)
+    print("Es de 3 digitos")
+    
+    c = n // 100
+    aux = n % 100
+    d = aux // 10
+    u = aux % 10
+    
+    print("los digitos son", c, d, u)
+    
+   
+    if c > d and c > u:
+        mayor = c
+    elif d > c and d > u:
+        mayor = d
+    else:
+        mayor = u
+        
+    print("Mayor es:", mayor)
+    
+    
+   
+    if c < d and c < u:
+        menor = c
+    elif d < c and d < u:
+        menor = d
+    else:
+        menor = u
+        
+    print("Menor es:", menor)
+    
+    
+
+    if (c > d and c < u) or (c < d and c > u):
+        medio = c
+    elif (d > c and d < u) or (d < c and d > u):
+        medio = d
+    else:
+        medio = u
+        
+    print("Del medio es:", medio)
+    
+    
+    print("ordenados son: ", mayor, medio, menor, " y al reves son : ", menor, medio, mayor)
+
+else:
+    print("No es de 3 digitos")
+
+
+
+
+
