@@ -1,0 +1,43 @@
+#for i in range(5):
+#    print(i)
+
+#for i in range(1,6):
+#    pri    print(i)
+
+#for i in range(0, 20, 2):
+#   print(i)
+    
+#4. Contar hacia atrás
+#    for i in range(10,0,-1):
+#        print(i)
+
+#for i in range (55):
+#    print(i,".", "URL")
+    
+#contador=0
+#for letra in "murcielagoabc123aatuivsv":
+    #if letra=="a":
+        #contador=contador+1
+#print("se encontraron", contador, "veces la letra a")
+
+#suma=0
+#for i in range(1,4):
+    #suma=suma+i
+#print(suma)
+
+#for i in range (1,11):
+    #print("5*", i, "=", 5*i)
+    
+#contador=0
+#for i in range(1, 50, 3):
+#    contador=contador+1
+#print("se encontraron", contador, "veces los multiplos de 3 del 1 al 50")        
+
+#for i in range (6, 1, -1):
+    #print("*"*i)
+    
+#tamanio=10
+#for i in range(tamanio):
+    #for j in range(tamanio):
+        #print("*", end="")
+    #print("*") 
