@@ -1,0 +1,45 @@
+def digito_maya(n):
+    
+    punto = "•"
+    barra = "—"
+    concha = "𝟘"
+
+    if n == 0:
+        return concha
+
+    barras = n // 5
+    puntos = n % 5
+
+    resultado = []
+
+    
+    if puntos > 0:
+        resultado.append(punto * puntos)
+
+   
+    for i in range(barras):
+        resultado.append(barra)
+
+    return "\n".join(resultado)
+
+
+def numero_maya(n):
+
+    if n < 0 or n > 100:
+        return "El número debe estar entre 0 y 100"
+
+    if n < 20:
+        return digito_maya(n)
+
+    arriba = n // 20
+    abajo = n % 20
+
+    parte_arriba = digito_maya(arriba)
+    parte_abajo = digito_maya(abajo)
+
+    return parte_arriba + "\n\n" + parte_abajo
+
+
+numero = int(input("Ingresa un número del 0 al 100: "))
+print("\nNúmero maya:\n")
+print(numero_maya(numero))
