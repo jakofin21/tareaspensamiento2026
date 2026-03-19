@@ -1,0 +1,55 @@
+numero = int(input("Ingresa un número (0-399): "))
+
+if numero < 0 or numero > 399:
+    print("Por favor, ingresa un número entre 0 y 399.")
+else:
+    superior = numero // 20
+    inferior = numero % 20
+
+    print("\nRepresentación Maya ")
+    
+    if superior == 0:
+        print("  ( )  <-- Caracol (Cero)")
+    else:
+    
+        puntos_sup = superior % 5
+        rayas_sup = superior // 5
+        
+        if puntos_sup > 0:
+            print("  ", "*" * puntos_sup)
+    
+        if rayas_sup > 0:
+            for i in range(rayas_sup):
+                print("  _____")
+                
+
+    
+    if inferior == 0:
+        print("  ( )  <-- Caracol (Cero)")
+    else:
+        puntos_inf = inferior % 5
+        rayas_inf = inferior // 5
+        
+        if puntos_inf > 0:
+            print("  ", "*" * puntos_inf)
+            
+        if rayas_inf > 0:
+            for i in range(rayas_inf):
+                print("  _____")
+
+numero = int(input("Ingresa un número decimal:"))
+original = numero
+binario = ""
+
+if numero == 0:
+    binario = "0"
+
+while numero > 0:
+    residuo = numero % 2
+ 
+    binario = str(residuo) + binario
+  
+    numero = numero // 2
+
+print("Número decimal:", original)
+print("Resultado en binario:", binario)
