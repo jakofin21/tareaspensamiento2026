@@ -1,0 +1,44 @@
+def pares_impares(lista):
+    pares=0
+    impares=0
+    for i in lista:
+        if i%2==0:
+            pares=pares+1
+        else:
+            impares=impares+1
+    print(f"hay {pares } pares, y  {impares} impares")
+    
+def positivos_negativos(lista):
+    positivos=0
+    negativos=0
+    ceros=0
+    for i in lista:
+        if i>0:
+            positivos=positivos+1
+        elif  i<0:
+            negativos=negativos+1
+        else:
+            ceros=ceros+1
+    print(f"hay {positivos} positivos,  {negativos} negativos, y {ceros} ceros")
+    
+def mayor_menor(lista):
+    mayor=lista[0]
+    menor=lista[0]
+    
+    for i in lista:
+        if i>mayor:
+            mayor=i
+        elif i <menor:
+            menor=i
+    print(f"el mayor es {mayor}, y el menor es {menor}")
+      
+    
+n=int(input("Ingrese tamaño de la lista: "))
+lista=[]
+
+for i in range(n):
+    datos=int(input("Ingrese datos: "))
+    lista.append(datos)
+pares_impares(lista)
+positivos_negativos(lista)
+mayor_menor(lista)
