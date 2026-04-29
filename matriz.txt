@@ -1,0 +1,82 @@
+#tabla=[
+ #   [1,2,3],
+  ## [7,8,9]
+  #]
+    
+#print(tabla)
+
+#print(tabla[0][0])
+#print(tabla[1][2]-tabla[1][1])
+
+#for i in tabla:
+ #   for j in i:
+  #      if j>=6:
+   #         break
+    #    else:
+     #       print(j)
+      
+      
+      
+#Llenar matrices
+
+#matriz=[]
+#size_row=int(input("Ingrese tamaño de fila: "))
+#size_column=int(input("Ingrese tamaño de columna: "))
+
+#for f in range (size_row):
+ #   fila=[]
+  #  for c in range(size_column):
+   #     dato=int(input("Ingrese datos: "))
+    #    fila.append(dato)
+    #matriz.append(fila)
+#print(matriz)    
+
+
+#A=[ [2,3],
+  #  [4,5]]
+#B=[ [5,4],
+#    [6,8]]
+#suma=[[0,0],[0,0]]
+
+#for i in range(len(A)):
+ #   for j in range(len(A[0])):
+#        suma[i][j]=A[i][j]+B[i][j]
+#print(suma)        
+#0. Realizar la resta de dos matrices
+#1. Solicitar al usuario el tamaño de 2 matrices
+#2. El usuario llena las matrices
+#3. Crea una función que reciba como parámetro las matrices y realice la resta de las matrices
+
+rows = int(input("Ingrese número de filas: "))
+cols = int(input("Ingrese número de columnas: "))
+
+matrixA = []
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        value = int(input(f"Ingrese dato para A[{i}][{j}]: "))
+        row.append(value)
+    matrixA.append(row)
+
+matrixB = []
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        value = int(input(f"Ingrese dato para B[{i}][{j}]: "))
+        row.append(value)
+    matrixB.append(row)
+
+
+result_matrix = []
+
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        result = matrixA[i][j] - matrixB[i][j]
+        row.append(result)
+    result_matrix.append(row)
+
+
+print("Resultado de la resta:")
+for row in result_matrix:
+    print(row)
